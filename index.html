@@ -6,29 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue Slider</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 
 <body>
 
-    <div id="app container"> 
-        <div class="row">
+    <div id="app">
+        <div class="all-container container">
+            <div class="row text-center align-items-center">
 
-            <div class="col-1">
-                <i class="far fa-arrow-alt-circle-left"></i>
+                <div class="col-2 arrows" @click="prev">
+                    <i class="far fa-arrow-alt-circle-left"></i>
+                </div>
+
+                <div class="col-8">
+
+                    <img class="" :src="arrayImg[currentPicture]">
+
+                    <div class="circle text-center">
+                        <i 
+                        :class="isCurrentDot(index)" 
+                        v-for="(img, index) in arrayImg" 
+                        class="fas fa-dot-circle"
+                        @click="moveto(index)">
+                    </i>
+                    </div>
+                    
+                </div>
+
+                <div class="col-2 arrows" @click="next">
+                    <i class="far fa-arrow-alt-circle-right"></i>
+                </div>
+
             </div>
-
-            <div class="col-10">
-                <img :src="arrayImg[0]"/>
-            </div>
-
-            <div class="col-1">
-                <i class="far fa-arrow-alt-circle-right"></i>
-            </div>
-
         </div>
     </div>
 

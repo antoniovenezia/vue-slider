@@ -1,0 +1,23 @@
+.all-container {
+    position: relative;
+}
+
+.all-container img{ 
+    width: 100%;
+}
+
+.circle {
+    width: 100%;
+    /* text-align: center; */
+    position: absolute;
+    bottom: 100px;
+}
+
+.current {
+    color: blue;
+}
+
+.arrows i {
+    font-size: 100px;
+}
+
