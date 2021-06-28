@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Slider</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+
+    <div id="app container"> 
+        <div class="row">
+
+            <div class="col-1 item">
+                <i class="far fa-arrow-alt-circle-left"></i>
+            </div>
+
+            <div class="col-10 item">
+                <img v-for="img in arrayImg" :src="arrayImg[0]"/>
+            </div>
+
+            <div class="col-1 item">
+                <i class="far fa-arrow-alt-circle-right"></i>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/script.js"></script>
+
+</body>
+
+</html>
