@@ -1,7 +1,3 @@
-//In data inserire una lista di url di immagini.
-//Nell’html visualizzare tutte queste immagini, una dopo l’altra.
-
-
 Vue.config.devtools = true;
 
 new Vue(
